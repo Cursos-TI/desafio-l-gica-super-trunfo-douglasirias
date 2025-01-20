@@ -12,13 +12,13 @@ int main() {
     int pontosturisticos;
     float area, pib, densidade, pibpercapita, superpoder;
     unsigned long int populacao;
-    char nome[50], codigocarta[20], estado[2];
+    char nome[50], codigocarta[20], estado[3];
 
     //Variaveis da carta 2
     int pontosturisticos2;
     float area2, pib2, densidade2, pibpercapita2, superpoder2;
     unsigned long int populacao2;
-    char nome2[50], codigocarta2[20], estado2[2];
+    char nome2[50], codigocarta2[20], estado2[3];
     
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -126,6 +126,7 @@ int main() {
     // }
      /*Comparar os valores das cartas, populacao, area, pib, pib per capita, 
     densidade populacional invertida, pontos turisticos*/
+    /*
     printf("***Comparando Cartas***\n");
     if (populacao > populacao2){
         printf("Cidade 1 tem mais população.\n");
@@ -156,11 +157,11 @@ int main() {
     }else{
         printf("Cidade 2 tem a menor densidade populacional.\n");
     }
-
+    */
     /*No nivel novato do Tema 2 nao pediu para comparar os pontos turisticos
     Mas eu acho que fica melhor para o jogo, ja que a variavel e inteira
     Alem do super poder que foi criado anteriormente*/
-    if (pontosturisticos > pontosturisticos2){
+    /*if (pontosturisticos > pontosturisticos2){
         printf("Cidade 1 tem mais pontos turisticos.\n");
     }else{
         printf("Cidade 2 tem mais pontos turisticos.\n");
@@ -179,6 +180,10 @@ int main() {
 
     // Exemplo:
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+*/
+    printf("Comparação de Cartas\n");
+    printf("Carta 1 - Estado: %s Código: %s População: %ld\n", estado, codigocarta, populacao);
+    printf("Carta 2 - Estado: %s Código: %s População: %ld\n", estado2, codigocarta2, populacao2);
 
     return 0;
 }
