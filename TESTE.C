@@ -1,35 +1,33 @@
 #include <stdio.h>
-#include <string.h>
 
 int main() {
+    // Variáveis da carta 1
     int pontosturisticos;
     float area, pib, densidade, pibpercapita, superpoder;
     unsigned long int populacao;
     char nome[50], codigocarta[20], estado[3];
 
+    // Variáveis da carta 2
     int pontosturisticos2;
     float area2, pib2, densidade2, pibpercapita2, superpoder2;
     unsigned long int populacao2;
     char nome2[50], codigocarta2[20], estado2[3];
 
+    // Primeira Carta
     printf("***Primeira Carta***\n");
-    printf("Digite o estado da primeira carta: \n");
-    fgets(estado, sizeof(estado), stdin); estado[strcspn(estado, "\n")] = '\0';
-    while (getchar() != '\n');
-    printf("Digite o código da primeira carta: \n");
-    fgets(codigocarta, sizeof(codigocarta), stdin); codigocarta[strcspn(codigocarta, "\n")] = '\0';
-    printf("Digite o nome da cidade da primeira carta: \n");
-    fgets(nome, sizeof(nome), stdin); nome[strcspn(nome, "\n")] = '\0';
-    printf("Digite a população da primeira carta: \n");
+    printf("Digite o estado da primeira carta: ");
+    scanf("%s", estado);
+    printf("Digite o código da primeira carta: ");
+    scanf("%s", codigocarta);
+    printf("Digite o nome da cidade da primeira carta: ");
+    scanf("%s", nome);
+    printf("Digite a população da primeira carta: ");
     scanf("%ld", &populacao);
-    while (getchar() != '\n');
-    printf("Digite a área da primeira carta: \n");
+    printf("Digite a área da primeira carta: ");
     scanf("%f", &area);
-    while (getchar() != '\n');
-    printf("Digite o PIB da primeira carta: \n");
+    printf("Digite o PIB da primeira carta: ");
     scanf("%f", &pib);
-    while (getchar() != '\n');
-    printf("Digite a quantidade de pontos turísticos da primeira carta: \n");
+    printf("Digite a quantidade de pontos turísticos da primeira carta: ");
     scanf("%d", &pontosturisticos);
 
     densidade = populacao / area;
@@ -48,28 +46,21 @@ int main() {
     superpoder = populacao + area + pib + pibpercapita + densidade + pontosturisticos;
     printf("O super poder da carta 1 é: %f\n", superpoder);
 
-    // Limpando variáveis e buffer de entrada antes de ler a segunda carta
-    memset(estado2, 0, sizeof(estado2));
-    while (getchar() != '\n');
-    
+    // Segunda Carta
     printf("***Segunda Carta***\n");
-    printf("Digite o estado da segunda carta: \n");
-    fgets(estado2, sizeof(estado2), stdin); estado2[strcspn(estado2, "\n")] = '\0';
-    while (getchar() != '\n');
-    printf("Digite o código da segunda carta: \n");
-    fgets(codigocarta2, sizeof(codigocarta2), stdin); codigocarta2[strcspn(codigocarta2, "\n")] = '\0';
-    printf("Digite o nome da cidade da segunda carta: \n");
-    fgets(nome2, sizeof(nome2), stdin); nome2[strcspn(nome2, "\n")] = '\0';
-    printf("Digite a população da segunda carta: \n");
+    printf("Digite o estado da segunda carta: ");
+    scanf("%s", estado2);
+    printf("Digite o código da segunda carta: ");
+    scanf("%s", codigocarta2);
+    printf("Digite o nome da cidade da segunda carta: ");
+    scanf("%s", nome2);
+    printf("Digite a população da segunda carta: ");
     scanf("%ld", &populacao2);
-    while (getchar() != '\n');
-    printf("Digite a área da segunda carta: \n");
+    printf("Digite a área da segunda carta: ");
     scanf("%f", &area2);
-    while (getchar() != '\n');
-    printf("Digite o PIB da segunda carta: \n");
+    printf("Digite o PIB da segunda carta: ");
     scanf("%f", &pib2);
-    while (getchar() != '\n');
-    printf("Digite a quantidade de pontos turísticos da segunda carta: \n");
+    printf("Digite a quantidade de pontos turísticos da segunda carta: ");
     scanf("%d", &pontosturisticos2);
 
     densidade2 = populacao2 / area2;
