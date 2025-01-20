@@ -73,7 +73,7 @@ int main() {
     // Aqui estou pedindo os dados da segunda carta
     // Tive que usar novamente o while e fgets
     printf("***Segunda Carta***\n");
-    printf("Digite o estadoda segunda carta: \n");
+    printf("Digite o estado da segunda carta: \n");
     fgets(estado2, sizeof(estado2), stdin); estado2[strcspn(estado2, "\n")] = '\0';
     while (getchar() != '\n');
     printf("Digite o código da segunda carta: \n"); 
@@ -126,6 +126,7 @@ int main() {
     // }
      /*Comparar os valores das cartas, populacao, area, pib, pib per capita, 
     densidade populacional invertida, pontos turisticos*/
+    printf("***Comparando Cartas***\n");
     if (populacao > populacao2){
         printf("Cidade 1 tem mais população.\n");
     }else{
@@ -133,25 +134,25 @@ int main() {
     }
 
     if (area > area2){
-        print("Cidade 1 tem mais área por km².\n");
+        printf("Cidade 1 tem mais área por km².\n");
     }else{
         printf("Cidade 2 tem mais área por km².\n");
     }
 
     if (pibpercapita > pibpercapita2){
-        print("Cidade 1 tem o maior pib per capita.\n");
+        printf("Cidade 1 tem o maior pib per capita.\n");
     }else{
         printf("Cidade 2 tem o maior pib per capita.\n");
     }
     
     if (pib > pib2){
-        print("Cidade 1 tem o maior PIB.\n");
+        printf("Cidade 1 tem o maior PIB.\n");
     }else{
         printf("Cidade 2 tem o maior PIB.\n");
     }
     
     if (densidade < densidade2){
-        print("Cidade 1 tem a menor densidade populacional.\n");
+        printf("Cidade 1 tem a menor densidade populacional.\n");
     }else{
         printf("Cidade 2 tem a menor densidade populacional.\n");
     }
@@ -160,13 +161,13 @@ int main() {
     Mas eu acho que fica melhor para o jogo, ja que a variavel e inteira
     Alem do super poder que foi criado anteriormente*/
     if (pontosturisticos > pontosturisticos2){
-        print("Cidade 1 tem mais pontos turisticos.\n");
+        printf("Cidade 1 tem mais pontos turisticos.\n");
     }else{
         printf("Cidade 2 tem mais pontos turisticos.\n");
     }
 
     if (superpoder > superpoder2){
-        print("Cidade 1 tem o super poder mais elevado.\n");
+        printf("Cidade 1 tem o super poder mais elevado.\n");
     }else{
         printf("Cidade 2 tem o super poder mais elevado.\n");
     }
