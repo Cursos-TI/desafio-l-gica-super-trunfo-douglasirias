@@ -2,19 +2,16 @@
 #include <string.h>
 
 int main() {
-    // Variáveis da carta 1
     int pontosturisticos;
     float area, pib, densidade, pibpercapita, superpoder;
     unsigned long int populacao;
     char nome[50], codigocarta[20], estado[3];
 
-    // Variáveis da carta 2
     int pontosturisticos2;
     float area2, pib2, densidade2, pibpercapita2, superpoder2;
     unsigned long int populacao2;
     char nome2[50], codigocarta2[20], estado2[3];
 
-    // Primeira Carta
     printf("***Primeira Carta***\n");
     printf("Digite o estado da primeira carta: \n");
     fgets(estado, sizeof(estado), stdin); estado[strcspn(estado, "\n")] = '\0';
@@ -51,7 +48,10 @@ int main() {
     superpoder = populacao + area + pib + pibpercapita + densidade + pontosturisticos;
     printf("O super poder da carta 1 é: %f\n", superpoder);
 
-    // Segunda Carta
+    // Limpando variáveis e buffer de entrada antes de ler a segunda carta
+    memset(estado2, 0, sizeof(estado2));
+    while (getchar() != '\n');
+    
     printf("***Segunda Carta***\n");
     printf("Digite o estado da segunda carta: \n");
     fgets(estado2, sizeof(estado2), stdin); estado2[strcspn(estado2, "\n")] = '\0';
