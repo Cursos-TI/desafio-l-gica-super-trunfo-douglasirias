@@ -159,13 +159,13 @@ int main() {
     /*No nivel novato do Tema 2 nao pediu para comparar os pontos turisticos
     Mas eu acho que fica melhor para o jogo, ja que a variavel e inteira
     Alem do super poder que foi criado anteriormente*/
-    if (pontosturisticos < pontosturisticos2){
+    if (pontosturisticos > pontosturisticos2){
         print("Cidade 1 tem mais pontos turisticos.\n");
     }else{
         printf("Cidade 2 tem mais pontos turisticos.\n");
     }
 
-    if (superpoder < superpoder2){
+    if (superpoder > superpoder2){
         print("Cidade 1 tem o super poder mais elevado.\n");
     }else{
         printf("Cidade 2 tem o super poder mais elevado.\n");
