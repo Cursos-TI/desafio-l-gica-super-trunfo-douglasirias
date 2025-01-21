@@ -178,8 +178,8 @@ int main(){
     Mas eu acho que fica melhor para o jogo, ja que a variavel e inteira
     Alem do super poder que foi criado anteriormente*/
     // Comparar a quantidade de pontos turisticos das duas cartas
-    printf("Carta 1 - Estado: %s, Código: %s, População: %f,\n", estado, codigocarta, pontosturisticos);
-    printf("Carta 2 - Estado: %s, Código: %s, População: %f,\n", estado2, codigocarta2, pontosturisticos2);
+    printf("Carta 1 - Estado: %s, Código: %s, População: %d,\n", estado, codigocarta, pontosturisticos);
+    printf("Carta 2 - Estado: %s, Código: %s, População: %d,\n", estado2, codigocarta2, pontosturisticos2);
     if (pontosturisticos > pontosturisticos2){
         printf("Cidade 1 tem mais pontos turisticos.\n");
     }else{
