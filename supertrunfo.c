@@ -137,41 +137,41 @@ int main(){
     printf("Carta 1 - Estado: %s, Código: %s, População: %ld,\n", estado, codigocarta, populacao);
     printf("Carta 2 - Estado: %s, Código: %s, População: %ld,\n", estado2, codigocarta2, populacao2);
     if (populacao > populacao2){
-        printf("Cidade 1 tem a maior população.\n");
+        printf("Resultado: Carta 1 é a vencedora!\n");
     }else{
-        printf("Cidade 2 tem a maior população.\n");
+        printf("Resultado: Carta 2 é a vencedora!\n");
     }
     // Comparar a área das duas cartas
     printf("Carta 1 - Estado: %s, Código: %s, Área: %f,\n", estado, codigocarta, area);
     printf("Carta 2 - Estado: %s, Código: %s, Área: %f,\n", estado2, codigocarta2, area2);
     if (area > area2){
-        printf("Cidade 1 tem mais área por km².\n");
+        printf("Resultado: Carta 1 é a vencedora!\n");
     }else{
-        printf("Cidade 2 tem mais área por km².\n");
+        printf("Resultado: Carta 2 é a vencedora!\n");
     }
     // Comparar o PIB per capita das duas cartas
     printf("Carta 1 - Estado: %s, Código: %s, PIB per Capita: %f,\n", estado, codigocarta, pibpercapita);
     printf("Carta 2 - Estado: %s, Código: %s, PIB per Capita: %f,\n", estado2, codigocarta2, pibpercapita2);
     if (pibpercapita > pibpercapita2){
-        printf("Cidade 1 tem o maior pib per capita.\n");
+        printf("Resultado: Carta 1 é a vencedora!\n");
     }else{
-        printf("Cidade 2 tem o maior pib per capita.\n");
+        printf("Resultado: Carta 2 é a vencedora!\n");
     }
     // Comparar o PIB das duas cartas
     printf("Carta 1 - Estado: %s, Código: %s, PIB: %f,\n", estado, codigocarta, pib);
     printf("Carta 2 - Estado: %s, Código: %s, PIB: %f,\n", estado2, codigocarta2, pib2);
     if (pib > pib2){
-        printf("Cidade 1 tem o maior PIB.\n");
+        printf("Resultado: Carta 1 é a vencedora!\n");
     }else{
-        printf("Cidade 2 tem o maior PIB.\n");
+        printf("Resultado: Carta 2 é a vencedora!\n");
     }
     // Comparar a densidade populacional das duas cartas
     printf("Carta 1 - Estado: %s, Código: %s, Densidade Populacional: %f,\n", estado, codigocarta, densidade);
     printf("Carta 2 - Estado: %s, Código: %s, Densidade Populacional: %f,\n", estado2, codigocarta2, densidade2);
     if (densidade < densidade2){
-        printf("Cidade 1 tem a menor densidade populacional.\n");
+        printf("Resultado: Carta 1 é a vencedora!\n");
     }else{
-        printf("Cidade 2 tem a menor densidade populacional.\n");
+        printf("Resultado: Carta 2 é a vencedora!\n");
     }
     
     /*No nivel novato do Tema 2 nao pediu para comparar os pontos turisticos
@@ -181,17 +181,17 @@ int main(){
     printf("Carta 1 - Estado: %s, Código: %s, Pontos Turisticos: %d,\n", estado, codigocarta, pontosturisticos);
     printf("Carta 2 - Estado: %s, Código: %s, Pontos Turisticos: %d,\n", estado2, codigocarta2, pontosturisticos2);
     if (pontosturisticos > pontosturisticos2){
-        printf("Cidade 1 tem mais pontos turisticos.\n");
+        printf("Resultado: Carta 1 é a vencedora!\n");
     }else{
-        printf("Cidade 2 tem mais pontos turisticos.\n");
+        printf("Resultado: Carta 2 é a vencedora!\n");
     }
     // Comparar o Super Poder das duas cartas
     printf("Carta 1 - Estado: %s, Código: %s, Super Poder: %f,\n", estado, codigocarta, superpoder);
     printf("Carta 2 - Estado: %s, Código: %s, Super Poder: %f,\n", estado2, codigocarta2, superpoder2);
     if (superpoder > superpoder2){
-        printf("Cidade 1 tem o super poder mais elevado.\n");
+        printf("Resultado: Carta 1 é a vencedora!\n");
     }else{
-        printf("Cidade 2 tem o super poder mais elevado.\n");
+        printf("Resultado: Carta 2 é a vencedora!\n");
     }
 
     // Exibição dos Resultados:
