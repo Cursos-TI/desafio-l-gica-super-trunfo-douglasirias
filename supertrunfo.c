@@ -132,48 +132,57 @@ int main(){
     //     printf("Cidade 2 tem maior população.\n");
     // }
 
-    printf("******Comparar Cartas******\n");
+    printf("******Comparar Cartas******\n"); // Já estou colocando caso os valores sejam iguais, para mostrar que deu empate, pq estava exibindo errado quem ganhava quando o valor era igual
     // Comparar a populacao das duas caratas
     printf("Carta 1 - Estado: %s, Código: %s, População: %ld,\n", estado, codigocarta, populacao);
     printf("Carta 2 - Estado: %s, Código: %s, População: %ld,\n", estado2, codigocarta2, populacao2);
-    if (populacao > populacao2){
-        printf("Resultado: Carta 1 é a vencedora!\n");
-    }else{
-        printf("Resultado: Carta 2 é a vencedora!\n");
-    }else{
-        printf("Resultado: Empate");
+    if (populacao > populacao2) {
+    printf("Resultado: Carta 1 é a vencedora!\n");
+    } else if (populacao < populacao2) {
+    printf("Resultado: Carta 2 é a vencedora!\n");
+    } else {
+    printf("Resultado: Empate!\n");
     }
+
     // Comparar a área das duas cartas
     printf("Carta 1 - Estado: %s, Código: %s, Área: %f,\n", estado, codigocarta, area);
     printf("Carta 2 - Estado: %s, Código: %s, Área: %f,\n", estado2, codigocarta2, area2);
     if (area > area2){
         printf("Resultado: Carta 1 é a vencedora!\n");
-    }else{
+    } else if (area < area2) {
         printf("Resultado: Carta 2 é a vencedora!\n");
+    } else {
+        printf("Resultado: Empate!\n");
     }
     // Comparar o PIB per capita das duas cartas
     printf("Carta 1 - Estado: %s, Código: %s, PIB per Capita: %f,\n", estado, codigocarta, pibpercapita);
     printf("Carta 2 - Estado: %s, Código: %s, PIB per Capita: %f,\n", estado2, codigocarta2, pibpercapita2);
     if (pibpercapita > pibpercapita2){
         printf("Resultado: Carta 1 é a vencedora!\n");
-    }else{
+    } else if (pibpercapita < pibpercapita2) {
         printf("Resultado: Carta 2 é a vencedora!\n");
+    } else {
+        printf("Resultado: Empate!\n");
     }
     // Comparar o PIB das duas cartas
     printf("Carta 1 - Estado: %s, Código: %s, PIB: %f,\n", estado, codigocarta, pib);
     printf("Carta 2 - Estado: %s, Código: %s, PIB: %f,\n", estado2, codigocarta2, pib2);
     if (pib > pib2){
         printf("Resultado: Carta 1 é a vencedora!\n");
-    }else{
+    } else if (pib < pib2) {
         printf("Resultado: Carta 2 é a vencedora!\n");
+    } else {
+        printf("Resultado: Empate!\n");
     }
     // Comparar a densidade populacional das duas cartas
     printf("Carta 1 - Estado: %s, Código: %s, Densidade Populacional: %f,\n", estado, codigocarta, densidade);
     printf("Carta 2 - Estado: %s, Código: %s, Densidade Populacional: %f,\n", estado2, codigocarta2, densidade2);
     if (densidade < densidade2){
         printf("Resultado: Carta 1 é a vencedora!\n");
-    }else{
+    } else if (densidade < densidade2) {
         printf("Resultado: Carta 2 é a vencedora!\n");
+    } else {
+        printf("Resultado: Empate!\n");
     }
     
     /*No nivel novato do Tema 2 nao pediu para comparar os pontos turisticos
@@ -184,16 +193,20 @@ int main(){
     printf("Carta 2 - Estado: %s, Código: %s, Pontos Turisticos: %d,\n", estado2, codigocarta2, pontosturisticos2);
     if (pontosturisticos > pontosturisticos2){
         printf("Resultado: Carta 1 é a vencedora!\n");
-    }else{
+    } else if (pontosturisticos < pontosturisticos2) {
         printf("Resultado: Carta 2 é a vencedora!\n");
+    } else {
+        printf("Resultado: Empate!\n");
     }
     // Comparar o Super Poder das duas cartas
     printf("Carta 1 - Estado: %s, Código: %s, Super Poder: %f,\n", estado, codigocarta, superpoder);
     printf("Carta 2 - Estado: %s, Código: %s, Super Poder: %f,\n", estado2, codigocarta2, superpoder2);
     if (superpoder > superpoder2){
         printf("Resultado: Carta 1 é a vencedora!\n");
-    }else{
+    } else if (superpoder < superpoder2) {
         printf("Resultado: Carta 2 é a vencedora!\n");
+    } else {
+        printf("Resultado: Empate!\n");
     }
 
     // Exibição dos Resultados:
