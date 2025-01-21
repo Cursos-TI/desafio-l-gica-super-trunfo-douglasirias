@@ -9,13 +9,13 @@ int main(){
     int pontosturisticos;
     float area, pib, densidade, pibpercapita, superpoder;
     unsigned long int populacao;
-    char nome[50], codigocarta[20], estado[4];
+    char nome[50], codigocarta[20], estado[3];
 
     //Variaveis da carta 2
     int pontosturisticos2;
     float area2, pib2, densidade2, pibpercapita2, superpoder2;
     unsigned long int populacao2;
-    char nome2[50], codigocarta2[20], estado2[4];
+    char nome2[50], codigocarta2[20], estado2[3];
 
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -23,14 +23,17 @@ int main(){
     
     // Primeira Carta
     // Aqui estou pedindo os dados da primeira carta
+    /* Tive que colocar [0] no scanf, estava dando um erro de sinxtaxe 'format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[3]’ [-Wformat=]'
+     Entao pesquisei e tinha varias formas mas que nao aprendi, esta foi a que achei mais facil e menos impactante.
+     O codigo estava executando mesmo com o erro, mas estou procurando nao deixar nenhum aviso*/
 
     printf("***Primeira Carta***\n");
     printf("Digite o estado da primeira carta: \n");
-    scanf("%s", &estado);
+    scanf("%s",&estado[0]);
     printf("Digite o código da primeira carta: \n"); 
-    scanf("%s", &codigocarta);
+    scanf("%s", &codigocarta[0]);
     printf("Digite o nome da cidade da primeira carta: \n");
-    scanf("%s", &nome);
+    scanf("%s", &nome[0]);
     printf("Digite a população da primeira carta: \n");
     scanf("%ld", &populacao);
     printf("Digite a área da primeira carta: \n");
@@ -39,4 +42,78 @@ int main(){
     scanf("%f", &pib);
     printf("Digite a quantidade de pontos turísticos da primeira carta: \n");
     scanf("%d", &pontosturisticos);
+
+    //Calcular a Densidade Populacional e Pib per capita:
+
+    densidade = (float)(populacao / area);
+    pibpercapita = (float)(pib / populacao);
+
+     //Super poder da carta1
+    superpoder = (float)(populacao + area + pib + pibpercapita + densidade + pontosturisticos);
+
+    // Exibição dos Dados das Cartas:
+    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
+    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+
+    printf("O Estado é: %s\n", estado);
+    printf("O código da carta é: %s\n", codigocarta);
+    printf("O nome da cidade é: %s\n", nome);
+    printf("Quantidade de Pontos Turísticos: %d\n", pontosturisticos);
+    printf("A Área da Cidade é: %f km²\n", area);
+    printf("O PIB da Cidade é: %f bilhões de reais\n", pib);
+    printf("A População da Cidade é: %ld\n", populacao);
+    printf("A Densidade Populacional é: %f pessoas/km²\n", densidade);
+    printf("O PIB per Capita é: %f reais\n", pibpercapita);
+    printf("O super poder da carta 1 é: %f\n", superpoder);
+
+    // Segunda Carta
+    // Aqui estou pedindo os dados da segunda carta
+    printf("***Segunda Carta***\n");
+    printf("Digite o estado da segunda carta: \n");
+    scanf("%s",&estado2[0]);
+    printf("Digite o código da segunda carta: \n"); 
+    scanf("%s", &codigocarta2[0]);
+    printf("Digite o nome da cidade da segunda carta: \n");
+    scanf("%s", &nome2[0]);
+    printf("Digite a população da segunda carta: \n");
+    scanf("%ld", &populacao2);
+    printf("Digite a área da segunda carta: \n");
+    scanf("%f", &area2);
+    printf("Digite o PIB da segunda carta: \n");
+    scanf("%f", &pib2);
+    printf("Digite a quantidade de pontos turísticos da primeira carta: \n");
+    scanf("%d", &pontosturisticos2);
+
+    // Exibição dos Dados das Cartas:
+    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
+    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    
+    //Calcular a Densidade Populacional e Pib per capita:
+    densidade = (float)(populacao2 / area2);
+    pibpercapita = (float)(pib2 / populacao2);
+    //Super poder da carta2
+    superpoder2 = (float)(populacao2 + area2 + pib2 + pibpercapita2 + densidade2 + pontosturisticos2);
+
+    printf("O Estado é: %s\n", estado2);
+    printf("O código da carta é: %s\n", codigocarta2);
+    printf("O nome da cidade é: %s\n", nome2);
+    printf("Quantidade de Pontos Turísticos: %d\n", pontosturisticos2);
+    printf("A Área da Cidade é: %f km²\n", area2);
+    printf("O PIB da Cidade é: %f bilhões de reais\n", pib2);
+    printf("A População da Cidade é: %ld\n", populacao2);
+    printf("A Densidade Populacional é: %f pessoas/km²\n", densidade2);
+    printf("O PIB per Capita é: %f reais\n", pibpercapita2);
+    printf("O super poder da carta 2 é: %f\n", superpoder2);
+    
+    // Comparação de Cartas:
+    // Desenvolva a lógica de comparação entre duas cartas.
+    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
+
+    // Exemplo:
+    // if (populacaoA > populacaoB) {
+    //     printf("Cidade 1 tem maior população.\n");
+    // } else {
+    //     printf("Cidade 2 tem maior população.\n");
+    // }
+
 }
