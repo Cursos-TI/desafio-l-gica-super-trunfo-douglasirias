@@ -132,7 +132,7 @@ int main(){
     //     printf("Cidade 2 tem maior população.\n");
     // }
 
-    printf("Comparação de Cartas\n");
+    printf("******Comparar Cartas******\n");
     // Comparar a populacao das duas caratas
     printf("Carta 1 - Estado: %s, Código: %s, População: %ld,\n", estado, codigocarta, populacao);
     printf("Carta 2 - Estado: %s, Código: %s, População: %ld,\n", estado2, codigocarta2, populacao2);
