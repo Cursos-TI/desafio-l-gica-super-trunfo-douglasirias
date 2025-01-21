@@ -47,7 +47,7 @@ int main(){
 
     printf("Digite o PIB da primeira carta: \n");
     scanf("%f", &pib);
-    
+
     printf("Digite a quantidade de pontos turísticos da primeira carta: \n");
     scanf("%d", &pontosturisticos);
 
@@ -105,8 +105,8 @@ int main(){
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
     
     //Calcular a Densidade Populacional e Pib per capita:
-    densidade = (float)(populacao2 / area2);
-    pibpercapita = (float)(pib2 / populacao2);
+    densidade2 = (float)(populacao2 / area2);
+    pibpercapita2 = (float)(pib2 / populacao2);
     //Super poder da carta2
     superpoder2 = (float)(populacao2 + area2 + pib2 + pibpercapita2 + densidade2 + pontosturisticos2);
 
