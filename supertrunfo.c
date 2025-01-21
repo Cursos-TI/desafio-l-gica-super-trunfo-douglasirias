@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h> // Inclui <string.h> para uso de strcspn
     //Estou continuando do mesmo arquivo do Tema 1
     /*O sistema ja permite o jogador inserir os dados da carta, e o sistema calcula automaticamente a densidade e o pib per capita
     E já estava comparando as cartas*/
@@ -30,16 +31,23 @@ int main(){
     printf("***Primeira Carta***\n");
     printf("Digite o estado da primeira carta: \n");
     scanf("%s",&estado[0]);
+
     printf("Digite o código da primeira carta: \n"); 
     scanf("%s", &codigocarta[0]);
+    while (getchar() != '\n'); // Tive que colocar esse codigo porque estava pedindo o nome e a populaçao juntos
+    
     printf("Digite o nome da cidade da primeira carta: \n");
-    scanf("%s", &nome[0]);
+    fgets(nome, sizeof(nome), stdin); nome[strcspn(nome, "\n")] = '\0'; // Para ler os espaços em branco, tive que pesquisar o fgets e while
+
     printf("Digite a população da primeira carta: \n");
     scanf("%ld", &populacao);
+
     printf("Digite a área da primeira carta: \n");
     scanf("%f", &area);
+
     printf("Digite o PIB da primeira carta: \n");
     scanf("%f", &pib);
+    
     printf("Digite a quantidade de pontos turísticos da primeira carta: \n");
     scanf("%d", &pontosturisticos);
 
@@ -69,18 +77,26 @@ int main(){
     // Segunda Carta
     // Aqui estou pedindo os dados da segunda carta
     printf("***Segunda Carta***\n");
+
     printf("Digite o estado da segunda carta: \n");
     scanf("%s",&estado2[0]);
+
     printf("Digite o código da segunda carta: \n"); 
     scanf("%s", &codigocarta2[0]);
+    
+    while (getchar() != '\n'); // Tive que colocar esse codigo porque estava pedindo o nome e a populaçao juntos
     printf("Digite o nome da cidade da segunda carta: \n");
-    scanf("%s", &nome2[0]);
+    fgets(nome2, sizeof(nome2), stdin); nome2[strcspn(nome2, "\n")] = '\0'; //Para ler os espaços em branco, tive que pesquisar o fgets e while
+
     printf("Digite a população da segunda carta: \n");
     scanf("%ld", &populacao2);
+
     printf("Digite a área da segunda carta: \n");
     scanf("%f", &area2);
+
     printf("Digite o PIB da segunda carta: \n");
     scanf("%f", &pib2);
+
     printf("Digite a quantidade de pontos turísticos da primeira carta: \n");
     scanf("%d", &pontosturisticos2);
 
@@ -115,5 +131,59 @@ int main(){
     // } else {
     //     printf("Cidade 2 tem maior população.\n");
     // }
+
+    printf("***Comparando Cartas***\n");
+    if (populacao > populacao2){
+        printf("Cidade 1 tem mais população.\n");
+    }else{
+        printf("Cidade 2 tem mais população.\n");
+    }
+
+    if (area > area2){
+        printf("Cidade 1 tem mais área por km².\n");
+    }else{
+        printf("Cidade 2 tem mais área por km².\n");
+    }
+
+    if (pibpercapita > pibpercapita2){
+        printf("Cidade 1 tem o maior pib per capita.\n");
+    }else{
+        printf("Cidade 2 tem o maior pib per capita.\n");
+    }
+    
+    if (pib > pib2){
+        printf("Cidade 1 tem o maior PIB.\n");
+    }else{
+        printf("Cidade 2 tem o maior PIB.\n");
+    }
+    
+    if (densidade < densidade2){
+        printf("Cidade 1 tem a menor densidade populacional.\n");
+    }else{
+        printf("Cidade 2 tem a menor densidade populacional.\n");
+    }
+    
+    /*No nivel novato do Tema 2 nao pediu para comparar os pontos turisticos
+    Mas eu acho que fica melhor para o jogo, ja que a variavel e inteira
+    Alem do super poder que foi criado anteriormente*/
+    
+    if (pontosturisticos > pontosturisticos2){
+        printf("Cidade 1 tem mais pontos turisticos.\n");
+    }else{
+        printf("Cidade 2 tem mais pontos turisticos.\n");
+    }
+
+    if (superpoder > superpoder2){
+        printf("Cidade 1 tem o super poder mais elevado.\n");
+    }else{
+        printf("Cidade 2 tem o super poder mais elevado.\n");
+    }
+
+    // Exibição dos Resultados:
+    // Após realizar as comparações, exiba os resultados para o usuário.
+    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
+
+    // Exemplo:
+    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
 
 }
