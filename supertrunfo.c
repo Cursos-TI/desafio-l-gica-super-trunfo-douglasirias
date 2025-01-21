@@ -134,6 +134,13 @@ int main(){
 
     printf("******Comparar Cartas******\n"); // Já estou colocando caso os valores sejam iguais, para mostrar que deu empate, pq estava exibindo errado quem ganhava quando o valor era igual
     // Comparar a populacao das duas caratas
+    // Exibição dos Resultados:
+    // Após realizar as comparações, exiba os resultados para o usuário.
+    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
+
+    // Exemplo:
+    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+    // Não coloquei essa variavel cidadeVencedor, fiz tudo com if e else
     printf("Carta 1 - Estado: %s, Código: %s, População: %ld,\n", estado, codigocarta, populacao);
     printf("Carta 2 - Estado: %s, Código: %s, População: %ld,\n", estado2, codigocarta2, populacao2);
     if (populacao > populacao2) {
@@ -209,11 +216,5 @@ int main(){
         printf("Resultado: Empate!\n");
     }
 
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
-
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
-
+    return 0;
 }
