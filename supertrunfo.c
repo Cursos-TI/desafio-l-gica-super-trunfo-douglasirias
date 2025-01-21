@@ -140,6 +140,8 @@ int main(){
         printf("Resultado: Carta 1 é a vencedora!\n");
     }else{
         printf("Resultado: Carta 2 é a vencedora!\n");
+    }else{
+        printf("Resultado: Empate")
     }
     // Comparar a área das duas cartas
     printf("Carta 1 - Estado: %s, Código: %s, Área: %f,\n", estado, codigocarta, area);
