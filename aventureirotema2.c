@@ -5,7 +5,9 @@
     //Estou continuando do mesmo arquivo do Tema 1
     /*O sistema ja permite o jogador inserir os dados da carta, e o sistema calcula automaticamente a densidade e o pib per capita
     E já estava comparando as cartas
-    Vou fazer meu Jogo Super Trunfo contra o computador e contra o usuario, vai ter a opcao no menu*/
+    Vou fazer meu Jogo Super Trunfo contra o computador e contra o usuario, vai ter a opcao no menu
+    mas como eu ainda nao sei fazer o computador gerar nomes, e os dados das cartas, vou deixar a variavel e o menu
+    mas nao vai ter codigo de jogo ainda, so funciona o codigo contra outro player.*/
 int main(){
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
@@ -260,7 +262,8 @@ int main(){
     }
                 break;
                 case 2:
-                    // aqui coloco o codigo contra o computador
+                    // aqui coloco o codigo contra o computador mas ainda nao sei fazer
+                    // o computador gerar nomes de cidades, etc.. entao so vai ficar aqui por enquanto
                 break;
             }
 
