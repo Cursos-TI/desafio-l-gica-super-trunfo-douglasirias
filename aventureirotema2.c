@@ -152,7 +152,11 @@ int main(){
     printf("O super poder da carta 2 é: %f\n", superpoder2);
     */
     printf("Agora escolha o atributo que queira comparar:\n");
-    printf("1 - População")
+    printf("1 - População\n");
+    printf("2 - Área\n");
+    printf("3 - Densidade Populacional\n");
+    printf("4 - PIB per Capita\n");
+    printf("5 - PIB\n");
     scanf("%d", &atributo);
 
     // Comparação de Cartas:
