@@ -157,30 +157,15 @@ int main(){
     printf("3 - Densidade Populacional\n");
     printf("4 - PIB per Capita\n");
     printf("5 - PIB\n");
+    printf("6 - Pontos Turisticos\n");
+    printf("7 - Super Poder\n");
     scanf("%d", &atributo);
 
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
-
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
-
-    printf("******Comparar Cartas******\n"); // Já estou colocando caso os valores sejam iguais, para mostrar que deu empate, pq estava exibindo errado quem ganhava quando o valor era igual
-    // Comparar a populacao das duas caratas
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
-
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
-    // Não coloquei essa variavel cidadeVencedor, fiz tudo com if e else
-    
-    printf("Carta 1 - Estado: %s, Código: %s, População: %ld,\n", estado, codigocarta, populacao);
+    switch (atributo)
+    {
+        case 1:
+            // vai comparar a populacao e indicar o vencedor do atributo
+            printf("Carta 1 - Estado: %s, Código: %s, População: %ld,\n", estado, codigocarta, populacao);
     printf("Carta 2 - Estado: %s, Código: %s, População: %ld,\n", estado2, codigocarta2, populacao2);
     if (populacao > populacao2) {
     printf("Resultado: Carta 1 é a vencedora!\n");
@@ -189,8 +174,10 @@ int main(){
     } else {
     printf("Resultado: Empate!\n");
     }
-
-    // Comparar a área das duas cartas
+        break;
+        case 2:
+            // vai comparar a area e indicar o vencedor do atributo
+            // Comparar a área das duas cartas
     printf("Carta 1 - Estado: %s, Código: %s, Área: %f,\n", estado, codigocarta, area);
     printf("Carta 2 - Estado: %s, Código: %s, Área: %f,\n", estado2, codigocarta2, area2);
     if (area > area2){
@@ -200,27 +187,10 @@ int main(){
     } else {
         printf("Resultado: Empate!\n");
     }
-    // Comparar o PIB per capita das duas cartas
-    printf("Carta 1 - Estado: %s, Código: %s, PIB per Capita: %f,\n", estado, codigocarta, pibpercapita);
-    printf("Carta 2 - Estado: %s, Código: %s, PIB per Capita: %f,\n", estado2, codigocarta2, pibpercapita2);
-    if (pibpercapita > pibpercapita2){
-        printf("Resultado: Carta 1 é a vencedora!\n");
-    } else if (pibpercapita < pibpercapita2) {
-        printf("Resultado: Carta 2 é a vencedora!\n");
-    } else {
-        printf("Resultado: Empate!\n");
-    }
-    // Comparar o PIB das duas cartas
-    printf("Carta 1 - Estado: %s, Código: %s, PIB: %f,\n", estado, codigocarta, pib);
-    printf("Carta 2 - Estado: %s, Código: %s, PIB: %f,\n", estado2, codigocarta2, pib2);
-    if (pib > pib2){
-        printf("Resultado: Carta 1 é a vencedora!\n");
-    } else if (pib < pib2) {
-        printf("Resultado: Carta 2 é a vencedora!\n");
-    } else {
-        printf("Resultado: Empate!\n");
-    }
-    // Comparar a densidade populacional das duas cartas
+        break;
+        case 3:
+            // vai comparar a densidade e indicar o vencedor do atributo
+            // Comparar a densidade populacional das duas cartas
     printf("Carta 1 - Estado: %s, Código: %s, Densidade Populacional: %f,\n", estado, codigocarta, densidade);
     printf("Carta 2 - Estado: %s, Código: %s, Densidade Populacional: %f,\n", estado2, codigocarta2, densidade2);
     if (densidade < densidade2){
@@ -230,8 +200,36 @@ int main(){
     } else {
         printf("Resultado: Empate!\n");
     }
-    
-    /*No nivel novato do Tema 2 nao pediu para comparar os pontos turisticos
+        break;
+        case 4:
+            // vai comparar o pib per capita e indicar o vencedor do atributo
+            // Comparar o PIB per capita das duas cartas
+    printf("Carta 1 - Estado: %s, Código: %s, PIB per Capita: %f,\n", estado, codigocarta, pibpercapita);
+    printf("Carta 2 - Estado: %s, Código: %s, PIB per Capita: %f,\n", estado2, codigocarta2, pibpercapita2);
+    if (pibpercapita > pibpercapita2){
+        printf("Resultado: Carta 1 é a vencedora!\n");
+    } else if (pibpercapita < pibpercapita2) {
+        printf("Resultado: Carta 2 é a vencedora!\n");
+    } else {
+        printf("Resultado: Empate!\n");
+    }
+        break;
+        case 5:
+            // vai comparar o pib e indicar o vencedor do atributo
+            // Comparar o PIB das duas cartas
+    printf("Carta 1 - Estado: %s, Código: %s, PIB: %f,\n", estado, codigocarta, pib);
+    printf("Carta 2 - Estado: %s, Código: %s, PIB: %f,\n", estado2, codigocarta2, pib2);
+    if (pib > pib2){
+        printf("Resultado: Carta 1 é a vencedora!\n");
+    } else if (pib < pib2) {
+        printf("Resultado: Carta 2 é a vencedora!\n");
+    } else {
+        printf("Resultado: Empate!\n");
+    }
+        break;
+        case 6:
+            // vai comparar os pontos turisticos e indicar o vencedor do atributo
+             /*No nivel novato do Tema 2 nao pediu para comparar os pontos turisticos
     Mas eu acho que fica melhor para o jogo, ja que a variavel e inteira
     Alem do super poder que foi criado anteriormente*/
     // Comparar a quantidade de pontos turisticos das duas cartas
@@ -243,8 +241,11 @@ int main(){
         printf("Resultado: Carta 2 é a vencedora!\n");
     } else {
         printf("Resultado: Empate!\n");
-    }
-    // Comparar o Super Poder das duas cartas
+    }    
+        break;
+        case 7:
+            // vai comparar o super poder e indicar o vencedor do atributo
+            // Comparar o Super Poder das duas cartas
     printf("Carta 1 - Estado: %s, Código: %s, Super Poder: %f,\n", estado, codigocarta, superpoder);
     printf("Carta 2 - Estado: %s, Código: %s, Super Poder: %f,\n", estado2, codigocarta2, superpoder2);
     if (superpoder > superpoder2){
@@ -254,7 +255,9 @@ int main(){
     } else {
         printf("Resultado: Empate!\n");
     }
-    
+        break;
+
+    }
                 break;
                 case 2:
                     // aqui coloco o codigo contra o computador
