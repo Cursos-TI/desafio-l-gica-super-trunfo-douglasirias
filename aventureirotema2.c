@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <string.h> // Inclui <string.h> para uso de strcspn
+#include <stdlib.h>
+#include <time.h>
     //Estou continuando do mesmo arquivo do Tema 1
     /*O sistema ja permite o jogador inserir os dados da carta, e o sistema calcula automaticamente a densidade e o pib per capita
-    E já estava comparando as cartas*/
+    E já estava comparando as cartas
+    Vou fazer meu Jogo Super Trunfo contra o computador e contra o usuario, vai ter a opcao no menu*/
 int main(){
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
@@ -17,6 +20,39 @@ int main(){
     float area2, pib2, densidade2, pibpercapita2, superpoder2;
     unsigned long int populacao2;
     char nome2[50], codigocarta2[20], estado2[3];
+
+    //Variaveis de escolha
+    int opcao, escolhaJogador1, escolhaJogador2, escolhaComputador;
+    srand(time(0)); //especificar que o computador de resultado aleatorio
+
+    //Menu Principal
+    printf("Jogo Super Trunfo\n");
+    printf("Escolha uma opção:\n");
+    printf("1. Iniciar Jogo\n");
+    printf("2. Ver as Regras do Jogo\n");
+    printf("3. Sair\n");
+    printf("Escolha: ");
+    scanf("%d", &opcao);
+
+    switch (opcao)
+    {
+        case 1:
+            printf("Começa o jogo aqui.\n");
+        break;
+        case 2:
+            printf("Regras do Jogo:\n");
+            printf("1. É permitido apenas um código por carta \n");
+            printf("2. É permitido apenas um nome por carta\n");
+            printf("3. Vence quem tiver o valor maior, exceto na densidade populacional, onde vence o menor valor. \n");
+            printf("4. Cada carta tem um Super Poder, que é a soma de todos os outros atributos.\n");
+            printf("5. Para se tornar o campeão, vence quem tiver a carta com maior pontuação geral \n");
+        break;
+        case 3:
+            printf("Saindo do jogo.\n");
+        break;
+        default:
+            printf("Opção Inválida.\n");
+    }
 
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
