@@ -22,7 +22,8 @@ int main(){
     char nome2[50], codigocarta2[20], estado2[3];
 
     //Variaveis de escolha
-    int opcao, escolhaJogador1, escolhaJogador2, escolhaComputador;
+    int opcao, escolhaJogador1, escolhaJogador2, escolhaComputador, escolhaPlayers;
+    int atributo;
     srand(time(0)); //especificar que o computador de resultado aleatorio
 
     //Menu Principal
@@ -37,24 +38,14 @@ int main(){
     switch (opcao)
     {
         case 1:
-            printf("Começa o jogo aqui.\n");
-        break;
-        case 2:
-            printf("Regras do Jogo:\n");
-            printf("1. É permitido apenas um código por carta \n");
-            printf("2. É permitido apenas um nome por carta\n");
-            printf("3. Vence quem tiver o valor maior, exceto na densidade populacional, onde vence o menor valor. \n");
-            printf("4. Cada carta tem um Super Poder, que é a soma de todos os outros atributos.\n");
-            printf("5. Para se tornar o campeão, vence quem tiver a carta com maior pontuação geral \n");
-        break;
-        case 3:
-            printf("Saindo do jogo.\n");
-        break;
-        default:
-            printf("Opção Inválida.\n");
-    }
-
-    // Cadastro das Cartas:
+            printf("1. Jogue contra outro Player.\n");
+            printf("2. Jogue contra o Computador.\n");
+            printf("Escolha: ");
+        scanf("%d", &escolhaPlayers);
+            switch (escolhaPlayers)
+            {
+                case 1:
+                  // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
     
@@ -98,7 +89,8 @@ int main(){
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-
+    /* Não vou exibir os dados das cartas, já que pediram para colocar que o jogador escolha
+    qual atributo queira comparar, não faz sentido se ele ja visualizar os dados.
     printf("O Estado é: %s\n", estado);
     printf("O código da carta é: %s\n", codigocarta);
     printf("O nome da cidade é: %s\n", nome);
@@ -109,7 +101,7 @@ int main(){
     printf("A Densidade Populacional é: %f pessoas/km²\n", densidade);
     printf("O PIB per Capita é: %f reais\n", pibpercapita);
     printf("O super poder da carta 1 é: %f\n", superpoder);
-
+    */
     // Segunda Carta
     // Aqui estou pedindo os dados da segunda carta
     printf("***Segunda Carta***\n");
@@ -146,6 +138,8 @@ int main(){
     //Super poder da carta2
     superpoder2 = (float)(populacao2 + area2 + pib2 + pibpercapita2 + densidade2 + pontosturisticos2);
 
+    /* Não vou exibir os dados das cartas, já que pediram para colocar que o jogador escolha
+    qual atributo queira comparar, não faz sentido se ele ja visualizar os dados.
     printf("O Estado é: %s\n", estado2);
     printf("O código da carta é: %s\n", codigocarta2);
     printf("O nome da cidade é: %s\n", nome2);
@@ -156,7 +150,11 @@ int main(){
     printf("A Densidade Populacional é: %f pessoas/km²\n", densidade2);
     printf("O PIB per Capita é: %f reais\n", pibpercapita2);
     printf("O super poder da carta 2 é: %f\n", superpoder2);
-    
+    */
+    printf("Agora escolha o atributo que queira comparar:\n");
+    printf("1 - População")
+    scanf("%d", &atributo);
+
     // Comparação de Cartas:
     // Desenvolva a lógica de comparação entre duas cartas.
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
@@ -177,6 +175,7 @@ int main(){
     // Exemplo:
     // printf("A cidade vencedora é: %s\n", cidadeVencedora);
     // Não coloquei essa variavel cidadeVencedor, fiz tudo com if e else
+    
     printf("Carta 1 - Estado: %s, Código: %s, População: %ld,\n", estado, codigocarta, populacao);
     printf("Carta 2 - Estado: %s, Código: %s, População: %ld,\n", estado2, codigocarta2, populacao2);
     if (populacao > populacao2) {
@@ -250,6 +249,28 @@ int main(){
         printf("Resultado: Carta 2 é a vencedora!\n");
     } else {
         printf("Resultado: Empate!\n");
+    }
+    
+                break;
+                case 2:
+                    // aqui coloco o codigo contra o computador
+                break;
+            }
+
+        break;
+        case 2:
+            printf("Regras do Jogo:\n");
+            printf("1. É permitido apenas um código por carta \n");
+            printf("2. É permitido apenas um nome por carta\n");
+            printf("3. Vence quem tiver o valor maior, exceto na densidade populacional, onde vence o menor valor. \n");
+            printf("4. Cada carta tem um Super Poder, que é a soma de todos os outros atributos.\n");
+            printf("5. Para se tornar o campeão, vence quem tiver a carta com maior pontuação geral \n");
+        break;
+        case 3:
+            printf("Saindo do jogo.\n");
+        break;
+        default:
+            printf("Opção Inválida.\n");
     }
 
     return 0;
